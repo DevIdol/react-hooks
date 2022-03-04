@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import { getNavItems } from "./NavItems";
 import styles from "./NavBar.module.css";
 
@@ -13,7 +13,17 @@ const NavBar = () => {
           <ul>
             {navitems.map((item) => {
               return (
-                <NavLink className={styles.item} to={`/${item.name}`} key={item.id}>
+                <NavLink
+                  style={({ isActive }) => {
+                    return {
+                      color: isActive ? "gold" : "",
+                      textDecoration: isActive ? "" : "none",
+                    };
+                  }}
+                  className={styles.item}
+                  to={`/${item.name}`}
+                  key={item.id}
+                >
                   {item.name}
                 </NavLink>
               );
@@ -21,6 +31,7 @@ const NavBar = () => {
           </ul>
         </nav>
       </header>
+      <Outlet />
     </div>
   );
 };
