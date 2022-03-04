@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./Components/NavBar";
+import UseEffect from "./Pages/UseEffect/UseEffect";
+import UseEffectItem from "./Pages/UseEffect/UseEffectItem";
 import UseState from "./Pages/UseState/UseState";
 import UseStateItem from "./Pages/UseState/UseStateItem";
 
@@ -22,6 +24,13 @@ const App = () => {
               element={<h1 style={{ padding: "30px" }}>Select Example</h1>}
             />
             <Route path=":usestateId" element={<UseState />} />
+          </Route>
+          <Route path="UseEffect" element={<UseEffectItem />}>
+            <Route
+              index
+              element={<h1 style={{ padding: "30px" }}>Select Example</h1>}
+            />
+            <Route path=":useeffectId" element={<UseEffect />} />
           </Route>
           <Route
             path="*"

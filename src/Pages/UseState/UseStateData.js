@@ -10,7 +10,5 @@ export const getUseStates = () => {
   return usestates;
 };
 export function getUseState(id) {
-    return usestates.find(
-      (data) => data.id === id
-    );
-  }
+  return usestates.find((data) => data.id === id);
+}
