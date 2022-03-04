@@ -1,0 +1,20 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 2px;
+  background: #040121;
+}
+
+.title {
+  color: #fff;
+  font-weight: 300;
+  font-size: 32px;
+}
+
+.item {
+  color: #fff;
+  font-weight: 300;
+  font-size: 20px;
+  padding: 0px 14px;
+}
