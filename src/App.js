@@ -8,7 +8,19 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" element={<NavBar />}>
+          <Route
+            index
+            element={
+              <h1 style={{ textAlign: "center", paddingTop: "40px" }}>
+                Select Hook Tutorial
+              </h1>
+            }
+          />
           <Route path="UseState" element={<UseStateItem />}>
+            <Route
+              index
+              element={<h1 style={{ padding: "30px" }}>Select Example</h1>}
+            />
             <Route path=":usestateId" element={<UseState />} />
           </Route>
           <Route
