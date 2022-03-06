@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import styles from "./Theme.module.css";
+
 
 const getStorageTheme = () => {
   let theme = "light-theme";
@@ -11,7 +11,8 @@ const getStorageTheme = () => {
 
 const UseEffectFive = () => {
   const [theme, setTheme] = useState(getStorageTheme());
-  const [color, setColor] = useState("Change Theme");
+  let themeMode = theme === "light-theme" ? "Light Mode" : "Dark Mode";
+  const [color, setColor] = useState(themeMode);
   const toggleTheme = () => {
     if (theme === "light-theme") {
       setTheme("dark-theme");
@@ -29,11 +30,26 @@ const UseEffectFive = () => {
     <section>
       <button onClick={toggleTheme}>{color}</button>
       {theme === "light-theme" ? (
-        <p className={styles.light} >
-          Light
+        <p
+          style={{
+            backgroundColor: "#fff",
+            padding: "100px",
+            border: "1px solid red",
+          }}
+        >
+          Light Mode
         </p>
       ) : (
-        <p className={styles.dark} >Dark Mode</p>
+        <p
+          style={{
+            backgroundColor: "#282c35",
+            padding: "100px",
+            color: "#fff",
+            border: "1px solid red",
+          }}
+        >
+          Dark Mode
+        </p>
       )}
     </section>
   );
