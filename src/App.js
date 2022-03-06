@@ -34,13 +34,13 @@ const App = () => {
             />
             <Route path=":useeffectId" element={<UseEffect />} />
           </Route>
-          <Route path="UseContext" element={<UseContextItem />} >
-          <Route
+          <Route path="UseContext" element={<UseContextItem />}>
+            <Route
               index
               element={<h1 style={{ padding: "30px" }}>Select Example</h1>}
             />
-          <Route path=":usecontextId" element={<UseContext/>} />
-           </Route>
+            <Route path=":usecontextId" element={<UseContext />} />
+          </Route>
           <Route
             path="*"
             element={
