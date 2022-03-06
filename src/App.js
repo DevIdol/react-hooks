@@ -4,6 +4,8 @@ import UseContext from "./Pages/useContext/UseContext";
 import UseContextItem from "./Pages/useContext/UseContextItem";
 import UseEffect from "./Pages/UseEffect/UseEffect";
 import UseEffectItem from "./Pages/UseEffect/UseEffectItem";
+import UseRef from "./Pages/UseRef/UseRef";
+import UseRefItem from "./Pages/UseRef/UseRefItem";
 import UseState from "./Pages/UseState/UseState";
 import UseStateItem from "./Pages/UseState/UseStateItem";
 
@@ -40,6 +42,17 @@ const App = () => {
               element={<h1 style={{ padding: "30px" }}>Select Example</h1>}
             />
             <Route path=":usecontextId" element={<UseContext />} />
+          </Route>
+          <Route path="UseRef" element={<UseRefItem />}>
+            <Route
+              index
+              element={
+                <h1 style={{ padding: "30px", color: "red" }}>
+                  Select Example
+                </h1>
+              }
+            />
+            <Route path=":userefId" element={<UseRef />} />
           </Route>
           <Route
             path="*"
