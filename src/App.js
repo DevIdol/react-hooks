@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./Components/NavBar";
+import UseContext from "./Pages/useContext/UseContext";
+import UseContextItem from "./Pages/useContext/UseContextItem";
 import UseEffect from "./Pages/UseEffect/UseEffect";
 import UseEffectItem from "./Pages/UseEffect/UseEffectItem";
 import UseState from "./Pages/UseState/UseState";
@@ -32,6 +34,13 @@ const App = () => {
             />
             <Route path=":useeffectId" element={<UseEffect />} />
           </Route>
+          <Route path="UseContext" element={<UseContextItem />} >
+          <Route
+              index
+              element={<h1 style={{ padding: "30px" }}>Select Example</h1>}
+            />
+          <Route path=":usecontextId" element={<UseContext/>} />
+           </Route>
           <Route
             path="*"
             element={
