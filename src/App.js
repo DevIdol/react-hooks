@@ -4,6 +4,8 @@ import UseContext from "./Pages/useContext/UseContext";
 import UseContextItem from "./Pages/useContext/UseContextItem";
 import UseEffect from "./Pages/UseEffect/UseEffect";
 import UseEffectItem from "./Pages/UseEffect/UseEffectItem";
+import UseReducer from "./Pages/UseReducer/UseReducer";
+import UseReducerItem from "./Pages/UseReducer/UseReducerItem";
 import UseRef from "./Pages/UseRef/UseRef";
 import UseRefItem from "./Pages/UseRef/UseRefItem";
 import UseState from "./Pages/UseState/UseState";
@@ -53,6 +55,9 @@ const App = () => {
               }
             />
             <Route path=":userefId" element={<UseRef />} />
+          </Route>
+          <Route path="UseReducer" element={<UseReducerItem/>} >
+            <Route path=":usereducerId" element={<UseReducer/>} />
           </Route>
           <Route
             path="*"
