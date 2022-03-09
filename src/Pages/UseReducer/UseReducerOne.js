@@ -38,7 +38,8 @@ const useReducerOne = () => {
     <div style={{ padding: "30px" }}>
       {todos.map((todo) => {
         return (
-          <label>
+         <div key={todo.id}>
+            <label>
             <input
               type="checkbox"
               checked={todo.complete}
@@ -46,6 +47,7 @@ const useReducerOne = () => {
             />
             {todo.title}
           </label>
+         </div>
         );
       })}
     </div>
