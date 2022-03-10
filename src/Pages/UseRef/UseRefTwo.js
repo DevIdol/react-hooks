@@ -12,7 +12,6 @@ const UseRefTwo = () => {
       // console.log(render.current)
       setSecond((pre) => pre + 1);
     }, 1000);
-
   };
 
   const resetTimer = () => {
@@ -27,13 +26,16 @@ const UseRefTwo = () => {
     clearInterval(timerId.current);
   };
   return (
-    <div style={{ padding: "30px" }}>
-      <h2>Timer: {second}</h2>
-      <button onClick={startTimer}>Start</button>
-      <button onClick={stopTimer} style={{ margin: "10px" }}>
-        Stop
-      </button>
-      <button onClick={resetTimer}>Reset</button>
+    <div style={{ display: "flex" }}>
+      <div style={{ padding: "30px" }}>
+        <h2>Timer: {second}</h2>
+        <button onClick={startTimer}>Start</button>
+        <button onClick={stopTimer} style={{ margin: "10px" }}>
+          Stop
+        </button>
+        <button onClick={resetTimer}>Reset</button>
+      </div>
+      <div></div>
     </div>
   );
 };
