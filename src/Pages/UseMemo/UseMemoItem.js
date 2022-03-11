@@ -1,8 +1,9 @@
 import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
-import { getUseCallbacks } from "./UseCallbackData";
-const UseCallbackItem = () => {
-  const usecallbacks = getUseCallbacks();
+import { getUseMemos } from "./UseMemoData";
+
+const UseMemoItem = () => {
+  const usememos = getUseMemos();
   return (
     <div style={{ display: "flex", marginTop: "10px" }}>
       <nav
@@ -12,7 +13,7 @@ const UseCallbackItem = () => {
         }}
       >
         <ul>
-          {usecallbacks.map((data) => (
+          {usememos.map((data) => (
             <NavLink
               style={({ isActive }) => {
                 return {
@@ -24,7 +25,7 @@ const UseCallbackItem = () => {
                   textDecoration: isActive ? "" : "none",
                 };
               }}
-              to={`/UseCallback/${data.id}`}
+              to={`/UseMemo/${data.id}`}
               key={data.id}
             >
               {data.name}
@@ -37,4 +38,4 @@ const UseCallbackItem = () => {
   );
 };
 
-export default UseCallbackItem;
+export default UseMemoItem;

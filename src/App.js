@@ -6,6 +6,8 @@ import UseContext from "./Pages/useContext/UseContext";
 import UseContextItem from "./Pages/useContext/UseContextItem";
 import UseEffect from "./Pages/UseEffect/UseEffect";
 import UseEffectItem from "./Pages/UseEffect/UseEffectItem";
+import UseMemo from "./Pages/UseMemo/UseMemo";
+import UseMemoItem from "./Pages/UseMemo/UseMemoItem";
 import UseReducer from "./Pages/UseReducer/UseReducer";
 import UseReducerItem from "./Pages/UseReducer/UseReducerItem";
 import UseRef from "./Pages/UseRef/UseRef";
@@ -78,7 +80,18 @@ const App = () => {
                 </h1>
               }
             />
-            <Route path=":usecallbackId" element={<UseCallback/>} />
+            <Route path=":usecallbackId" element={<UseCallback />} />
+          </Route>
+          <Route path="UseMemo" element={<UseMemoItem />}>
+            <Route
+              index
+              element={
+                <h1 style={{ padding: "30px", color: "red" }}>
+                  Select Example
+                </h1>
+              }
+            />
+            <Route path=":usememoId" element={<UseMemo />} />
           </Route>
           <Route
             path="*"
