@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./Components/NavBar";
+import UseCallback from "./Pages/UseCallback/UseCallback";
+import UseCallbackItem from "./Pages/UseCallback/UseCallbackItem";
 import UseContext from "./Pages/useContext/UseContext";
 import UseContextItem from "./Pages/useContext/UseContextItem";
 import UseEffect from "./Pages/UseEffect/UseEffect";
@@ -56,8 +58,27 @@ const App = () => {
             />
             <Route path=":userefId" element={<UseRef />} />
           </Route>
-          <Route path="UseReducer" element={<UseReducerItem/>} >
-            <Route path=":usereducerId" element={<UseReducer/>} />
+          <Route path="UseReducer" element={<UseReducerItem />}>
+            <Route
+              index
+              element={
+                <h1 style={{ padding: "30px", color: "red" }}>
+                  Select Example
+                </h1>
+              }
+            />
+            <Route path=":usereducerId" element={<UseReducer />} />
+          </Route>
+          <Route path="UseCallback" element={<UseCallbackItem />}>
+            <Route
+              index
+              element={
+                <h1 style={{ padding: "30px", color: "red" }}>
+                  Select Example
+                </h1>
+              }
+            />
+            <Route path=":usecallbackId" element={<UseCallback/>} />
           </Route>
           <Route
             path="*"

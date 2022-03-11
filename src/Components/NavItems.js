@@ -4,6 +4,7 @@ const navItems = [
   { id: 3, name: "UseContext" },
   { id: 4, name: "UseRef" },
   { id: 5, name: "UseReducer" },
+  { id: 6, name: "UseCallback" },
 ];
 
 export const getNavItems = () => {
