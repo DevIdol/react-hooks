@@ -5,6 +5,8 @@ const navItems = [
   { id: 4, name: "UseRef" },
   { id: 5, name: "UseReducer" },
   { id: 6, name: "UseCallback" },
+  { id: 7, name: "UseMemo" },
+  { id: 8, name: "CustomHook" },
 ];
 
 export const getNavItems = () => {
