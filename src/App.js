@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./Components/NavBar";
+import CustomHook from "./Pages/CustomHook/CustomHook";
+import CustomHookItem from "./Pages/CustomHook/CustomHookItem";
 import UseCallback from "./Pages/UseCallback/UseCallback";
 import UseCallbackItem from "./Pages/UseCallback/UseCallbackItem";
 import UseContext from "./Pages/useContext/UseContext";
@@ -92,6 +94,17 @@ const App = () => {
               }
             />
             <Route path=":usememoId" element={<UseMemo />} />
+          </Route>
+          <Route path="CustomHook" element={<CustomHookItem />}>
+            <Route
+              index
+              element={
+                <h1 style={{ padding: "30px", color: "red" }}>
+                  Select Example
+                </h1>
+              }
+            />
+            <Route path=":customhookId" element={<CustomHook/>} />
           </Route>
           <Route
             path="*"
